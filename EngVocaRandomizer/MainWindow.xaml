@@ -1,0 +1,29 @@
+﻿<Window x:Class="EngVocaRandomizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EngVocaRandomizer"
+        mc:Ignorable="d"
+        Title="영어 단어" Height="450" Width="800">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="772">
+            <TabItem Header="단어장">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox x:Name="vocaList_lb" HorizontalAlignment="Left" Height="351" Margin="10,10,0,0" VerticalAlignment="Top" Width="180" SelectionChanged="ListView_SelectionChanged"/>
+                    <!--<TextBox x:Name="vocaList_tb" HorizontalAlignment="Left" Height="351" Margin="195,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="174"/>-->
+                    <ListBox x:Name="vocaList_eng" HorizontalAlignment="Left" Height="351" Margin="195,10,0,0" VerticalAlignment="Top" Width="180" SelectionChanged="ListView_SelectionChanged"/>
+                    <ListBox x:Name="vocaList_kor" HorizontalAlignment="Left" Height="351" Margin="380,10,0,0" VerticalAlignment="Top" Width="360" SelectionChanged="ListView_SelectionChanged"/>
+                    <ScrollBar x:Name="scrB" HorizontalAlignment="Left" Height="351" Margin="745,10,0,0" VerticalAlignment="Top" Width="10" Orientation="Vertical" Grid.Row="0" Grid.Column="1" ValueChanged="Scr_ValueChanged" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="데이터 입력">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox HorizontalAlignment="Left" Height="350" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180" TextChanged="TextBox_TextChanged"/>
+                    <TextBox HorizontalAlignment="Left" Height="350" Margin="200,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180" TextChanged="TextBox_TextChanged"/>
+                    <Button x:Name="exButton" Content="엑셀 파일 열기" HorizontalAlignment="Left" Margin="660,340,0,0" VerticalAlignment="Top" Width="95" Click="exButton_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
